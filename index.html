@@ -36,7 +36,64 @@ input{width:100%;padding:12px;margin:10px 0;border:2px solid #ddd;border-radius:
 <div class="box">
 <h2>✅ লগইন সফল!</h2>
 <p>স্বাগতম Admin ভাই</p>
-<p>এখানে পরে প্রোডাক্ট অ্যাড/ডিলিট করার অপশন আসবে</p>
+<!-- প্রোডাক্ট অ্যাড ফর্ম -->
+<h3>➕ নতুন প্রোডাক্ট অ্যাড করো</h3>
+<input type="text" id="pName" placeholder="প্রোডাক্টের নাম">
+<input type="number" id="pPrice" placeholder="দাম লিখো">
+<input type="text" id="pImg" placeholder="ছবির লিংক দিন">
+<button class="btn" onclick="addProduct()">প্রোডাক্ট অ্যাড করো</button>
+
+<hr style="margin:20px 0">
+
+<!-- প্রোডাক্ট লিস্ট -->
+<h3>📦 আমার প্রোডাক্ট</h3>
+<div id="productList" style="text-align:left">কোনো প্রোডাক্ট নাই</div>
+
+<script>
+let products = [];
+
+function addProduct(){
+  let name = document.getElementById('pName').value;
+  let price = document.getElementById('pPrice').value;
+  let img = document.getElementById('pImg').value;
+  
+  if(name == "" || price == ""){
+    alert("নাম আর দাম লিখতে হবে ভাই!");
+    return;
+  }
+  
+  products.push({name:name, price:price, img:img});
+  showProducts();
+  
+  document.getElementById('pName').value = "";
+  document.getElementById('pPrice').value = "";
+  document.getElementById('pImg').value = "";
+  alert("প্রোডাক্ট অ্যাড হইছে ✅");
+}
+
+function showProducts(){
+  let list = document.getElementById('productList');
+  if(products.length == 0){
+    list.innerHTML = "কোনো প্রোডাক্ট নাই";
+    return;
+  }
+  
+  let html = "";
+  for(let i=0; i<products.length; i++){
+    html += `<div style="border:1px solid #ddd;padding:10px;margin:10px 0;border-radius:8px">
+      <b>${products[i].name}</b> - ${products[i].price} টাকা
+      <button onclick="deleteProduct(${i})" style="float:right;background:red;color:white;border:none;padding:5px 10px;border-radius:5px">ডিলিট</button>
+    </div>`;
+  }
+  list.innerHTML = html;
+}
+
+function deleteProduct(i){
+  products.splice(i,1);
+  showProducts();
+  alert("ডিলিট হইছে");
+}
+</script>
 <button class="btn" onclick="logout()">Logout</button>
 </div>
 </div>
