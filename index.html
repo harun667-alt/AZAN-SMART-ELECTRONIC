@@ -48,7 +48,18 @@ input{width:100%;padding:12px;margin:10px 0;border:2px solid #ddd;border-radius:
 <!-- প্রোডাক্ট লিস্ট -->
 <h3>📦 আমার প্রোডাক্ট</h3>
 <div id="productList" style="text-align:left">কোনো প্রোডাক্ট নাই</div>
-
+function login(){
+  let u = document.getElementById('username').value;
+  let p = document.getElementById('password').value;
+  
+  if(u == 'admin' && p == '1234'){
+    document.getElementById('adminPanel').style.display = 'block';
+    document.getElementById('loginBox').style.display = 'none';
+    localStorage.setItem('isLoggedIn', 'true');
+  } else {
+    alert('ভুল ইউজারনেম বা পাসওয়ার্ড');
+  }
+}
 <script>
 let products = JSON.parse(localStorage.getItem('products')) || [];
 showProducts();
