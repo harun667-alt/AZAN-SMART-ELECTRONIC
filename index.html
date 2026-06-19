@@ -48,6 +48,12 @@ input{width:100%;padding:12px;margin:10px 0;border:2px solid #ddd;border-radius:
 <!-- প্রোডাক্ট লিস্ট -->
 <h3>📦 আমার প্রোডাক্ট</h3>
 <div id="productList" style="text-align:left">কোনো প্রোডাক্ট নাই</div>
+function addProduct(){
+  ...
+  showProducts();
+}
+
+// 👇 login ফাংশন এখানে বসাবা, </script> এর উপরে
 function login(){
   let u = document.getElementById('username').value;
   let p = document.getElementById('password').value;
@@ -60,6 +66,10 @@ function login(){
     alert('ভুল ইউজারনেম বা পাসওয়ার্ড');
   }
 }
+
+</script>  // 👆 এই ট্যাগের উপরে
+</body>
+</html>
 <script>
 let products = JSON.parse(localStorage.getItem('products')) || [];
 showProducts();
