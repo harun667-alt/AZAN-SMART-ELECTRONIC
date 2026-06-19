@@ -5,69 +5,189 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AZAN SMART ELECTRONIC</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-      margin: 0;
+      background: #f5f5f5;
+      padding: 20px;
     }
     .container {
-      max-width: 500px;
+      max-width: 1200px;
       margin: 0 auto;
-      background: rgba(255,255,255,0.15);
-      padding: 40px 20px;
-      border-radius: 20px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    }
-    img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 5px solid white;
-      margin-bottom: 20px;
     }
     h1 {
-      font-size: 36px;
-      margin: 20px 0;
-      color: #ffeb3b;
+      text-align: center;
+      color: #333;
+      margin-bottom: 10px;
     }
-    p {
+    .container > p {
+      text-align: center;
+      color: #666;
+      margin-bottom: 40px;
+    }
+    .products {
+      margin-bottom: 50px;
+    }
+    .products h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+      border-left: 4px solid #3498db;
+      padding-left: 15px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .product h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .product p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .price {
+      display: block;
       font-size: 20px;
-      line-height: 1.8;
-    }
-    .btn {
-      display: inline-block;
-      background: #1877f2;
-      color: white;
-      padding: 15px 30px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 18px;
-      margin-top: 25px;
       font-weight: bold;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #0d5cb6;
-      transform: scale(1.05);
+      color: #e74c3c;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="logo.jpeg" alt="AZAN SMART ELECTRONIC Logo">
-    <h1>AZAN SMART ELECTRONICS</h1>
-    <p>আসালামু আলাইকুম ❤️<br>
-    আপনার বিশ্বস্ত ইলেকট্রনিক্সের ঠিকানা<br>
-    সকল ধরনের ইলেকট্রনিক্স পণ্য<br>
-    <a href="https://www.facebook.com/17coaBDvv" target="_blank" 
-   style="background: #1877f2; color: white; padding: 15px 30px; 
-          text-decoration: none; border-radius: 10px; font-size: 18px; 
-          display: inline-block; margin-top: 20px; font-weight: bold;">
-  📱 আমাদের ফেসবুক পেজ
-</a>
+    <h1>AZAN SMART ELECTRONIC</h1>
+    <p>স্মার্ট গ্যাজেটের বিশ্বস্ত ঠিকানা</p>
+
+    <!-- 1. মিনি ফ্যান সেকশন -->
+    <div class="products">
+      <h2>🌀 মিনি USB ফ্যান কালেকশন</h2>
+      <div class="product-grid">
+        
+        <div class="product">
+          <img src="images/fan1.jpg" alt="Mini Fan 1">
+          <h3>Mini Desk Fan</h3>
+          <p>USB পোর্টেবল, 3 স্পিড</p>
+          <span class="price">৳350</span>
+        </div>
+
+        <div class="product">
+          <img src="images/fan2.jpg" alt="Mini Fan 2">
+          <h3>Clip Fan</h3>
+          <p>টেবিল-বেডে ক্লিপ করে</p>
+          <span class="price">৳420</span>
+        </div>
+
+        <div class="product">
+          <img src="images/fan4.jpg" alt="Mini Fan 4">
+          <h3>Neck Fan</h3>
+          <p>হাত ফ্রি, রিচার্জেবল</p>
+          <span class="price">৳650</span>
+        </div>
+
+        <div class="product">
+          <img src="images/n3.jpg" alt="Deer Horn Fan">
+          <h3>Deer Horn Fan</h3>
+          <p>4 কালার, LED লাইট</p>
+          <span class="price">৳380</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2. LED ঘড়ি সেকশন -->
+    <div class="products">
+      <h2>⏰ LED ডিজিটাল ঘড়ি</h2>
+      <div class="product-grid">
+        
+        <div class="product">
+          <img src="images/watch1.jpg" alt="LED Watch 1">
+          <h3>Digital LED Watch</h3>
+          <p>টাইম + ডেট + অ্যালার্ম</p>
+          <span class="price">৳550</span>
+        </div>
+
+        <div class="product">
+          <img src="images/watch2.jpg" alt="LED Watch 2">
+          <h3>Sports Watch</h3>
+          <p>ওয়াটারপ্রুফ, স্টপওয়াচ</p>
+          <span class="price">৳680</span>
+        </div>
+
+        <div class="product">
+          <img src="images/watch3.jpg" alt="LED Watch 3">
+          <h3>Smart LED Watch</h3>
+          <p>টাচ সেন্সর, USB চার্জ</p>
+          <span class="price">৳850</span>
+        </div>
+
+        <div class="product">
+          <img src="images/watch4.jpg" alt="LED Watch 4">
+          <h3>Premium Watch</h3>
+          <p>মেটাল বেল্ট, লং ব্যাটারি</p>
+          <span class="price">৳950</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. কিচেন অ্যাপ্লায়েন্স সেকশন -->
+    <div class="products">
+      <h2>⚡ কিচেন অ্যাপ্লায়েন্স + ফ্যান অফার</h2>
+      <div class="product-grid">
+        
+        <div class="product">
+          <img src="images/grinder1.jpg" alt="Electric Masala Grinder">
+          <h3>Electric Masala Grinder</h3>
+          <p>স্টেইনলেস স্টিল, 1000W মোটর</p>
+          <p>মসলা-চা-কফি সব গুড়া হবে</p>
+          <span class="price">৳1450</span>
+        </div>
+
+        <div class="product">
+          <img src="images/grinder2.jpg" alt="Silver Electric Grinder">
+          <h3>Silver Grinder</h3>
+          <p>হেভি ডিউটি, স্টেইনলেস জার</p>
+          <p>বাসার সব মসলা এক মিনিটে</p>
+          <span class="price">৳1550</span>
+        </div>
+
+        <div class="product">
+          <img src="images/grinder3.jpg" alt="KitchenAid Blender">
+          <h3>KitchenAid Blender</h3>
+          <p>প্রিমিয়াম গ্লাস জার, 3 ইন 1</p>
+          <p>জুস, স্মুদি, শেক বানাও</p>
+          <span class="price">৳3200</span>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </body>
 </html>
