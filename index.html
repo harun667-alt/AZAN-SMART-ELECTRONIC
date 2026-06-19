@@ -147,7 +147,19 @@ function deleteProduct(i){
 </div>
 
 <script>
-function login(){
+function addProduct(){
+  let name = document.getElementById('pName').value;
+  let price = document.getElementById('pPrice').value;
+  let img = document.getElementById('pImg').value;
+  if(name && price){
+    products.push({name:name, price:price, img:img});
+    localStorage.setItem('products', JSON.stringify(products));
+    showProducts();
+    document.getElementById('pName').value = '';
+    document.getElementById('pPrice').value = '';
+    document.getElementById('pImg').value = '';
+  }
+}
   let user = document.getElementById('user').value;
   let pass = document.getElementById('pass').value;
   
