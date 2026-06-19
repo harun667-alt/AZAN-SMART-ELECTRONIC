@@ -54,19 +54,24 @@ function addProduct(){
 }
 
 // 👇 login ফাংশন এখানে বসাবা, </script> এর উপরে
+
+}
 function login(){
   let u = document.getElementById('username').value;
   let p = document.getElementById('password').value;
-  
+
   if(u == 'admin' && p == '1234'){
     document.getElementById('adminPanel').style.display = 'block';
     document.getElementById('loginBox').style.display = 'none';
     localStorage.setItem('isLoggedIn', 'true');
+    return false;
   } else {
     alert('ভুল ইউজারনেম বা পাসওয়ার্ড');
+    return false;
   }
 }
 
+  
 </script>  // 👆 এই ট্যাগের উপরে
 </body>
 </html>
